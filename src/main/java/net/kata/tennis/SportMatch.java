@@ -22,6 +22,6 @@ public interface SportMatch {
 	 * get the winner if the game is finished
 	 * @return
 	 */
-	String getWinner();
+	String getWinnerFormatted();
 	
 }

@@ -68,28 +68,27 @@ public class TennisGameTest {
 	private String expected;
 	private String expectedWinner;
 
-	public TennisGameTest(int player1Score, int player2Score, String expectedScore, String expectedWinner) {
+	public TennisGameTest(int player1Score, int player2Score, String expected, String expectedWinner) {
 		this.player1Score = player1Score;
 		this.player2Score = player2Score;
-		this.expected = expectedScore;
+		this.expected = expected;
 		this.expectedWinner = expectedWinner;
 	}
 
 	@Test
 	public final void testAllCases() {
-		TennisGame tennisGame = new TennisGame(FIRST_PLAYER, SECOND_PLAYER);
+		TennisGame tg = new TennisGame(FIRST_PLAYER, SECOND_PLAYER);
 		int min = Math.min(player1Score, player2Score);
 		int max = Math.max(player1Score, player2Score);
-		
 		IntStream.range(0, min).forEach(i -> {
-			tennisGame.winPoint(FIRST_PLAYER);
-			tennisGame.winPoint(SECOND_PLAYER);
+			tg.winPoint(FIRST_PLAYER);
+			tg.winPoint(SECOND_PLAYER);
 		});
 		String playerName = (max == player1Score) ? FIRST_PLAYER : SECOND_PLAYER;
 		IntStream.range(min, max).forEach(i -> {
-			tennisGame.winPoint(playerName);
+			tg.winPoint(playerName);
 		});
-		Assert.assertEquals(expected, tennisGame.getGameScore());
-		Assert.assertEquals(expectedWinner, tennisGame.getWinner());
+		Assert.assertEquals(tg.getGameScore(), "Game score : " + expected);
+		Assert.assertEquals(tg.getWinnerFormatted(), expectedWinner);
 	}
 }
