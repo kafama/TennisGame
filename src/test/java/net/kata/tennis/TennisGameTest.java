@@ -15,15 +15,7 @@ import org.junit.runners.Parameterized.Parameters;
  *
  */
 @RunWith(Parameterized.class)
-public class TennisGameTest {
-
-	private static final String FIRST_PLAYER = "player 1";
-
-	private static final String FIRST_PLAYER_WIN = FIRST_PLAYER + " win the game";
-	
-	private static final String SECOND_PLAYER = "player 2";
-
-	private static final String SCOND_PLAYER_WIN = SECOND_PLAYER + " win the game";
+public class TennisGameTest extends TestConstantes {
 
 	@Parameters
 	public static List<Object[]> pointsWithScores() {
@@ -33,31 +25,31 @@ public class TennisGameTest {
 					{ 0, 1, "0 - 15", ""},  
 					{ 0, 2, "0 - 30", ""},  
 					{ 0, 3, "0 - 40", ""}, 
-					{ 0, 4, "0 - 0", SCOND_PLAYER_WIN }, 
+					{ 0, 4, "0 - 0", SCOND_PLAYER_WIN_GAME }, 
 					{ 1, 0, "15 - 0", ""},  
 					{ 1, 1, "15 - 15", ""}, 
 					{ 1, 2, "15 - 30", ""},  
 					{ 1, 3, "15 - 40", ""},  
-					{ 1, 4, "0 - 0", SCOND_PLAYER_WIN },
+					{ 1, 4, "0 - 0", SCOND_PLAYER_WIN_GAME },
 					{ 2, 0, "30 - 0", ""},  
 					{ 2, 1, "30 - 15", ""},  
 					{ 2, 2, "30 - 30", ""},  
 					{ 2, 3, "30 - 40", ""}, 
-					{ 2, 4, "0 - 0", SCOND_PLAYER_WIN }, 
+					{ 2, 4, "0 - 0", SCOND_PLAYER_WIN_GAME }, 
 					{ 3, 0, "40 - 0", ""},  
 					{ 3, 1, "40 - 15", ""}, 
 					{ 3, 2, "40 - 30", ""},  
 					{ 3, 3, "40 - 40", ""}, 
 					{ 3, 4, "40 - ADV", ""}, 
-					{ 3, 5, "0 - 0", SCOND_PLAYER_WIN },
-					{ 4, 0, "0 - 0", FIRST_PLAYER_WIN },
-					{ 4, 1, "0 - 0", FIRST_PLAYER_WIN },
-					{ 4, 2, "0 - 0", FIRST_PLAYER_WIN },
+					{ 3, 5, "0 - 0", SCOND_PLAYER_WIN_GAME },
+					{ 4, 0, "0 - 0", FIRST_PLAYER_WIN_GAME },
+					{ 4, 1, "0 - 0", FIRST_PLAYER_WIN_GAME },
+					{ 4, 2, "0 - 0", FIRST_PLAYER_WIN_GAME },
 					{ 4, 3, "ADV - 40", ""}, 
 					{ 4, 4, "DEUCE - DEUCE", ""}, 
 					{ 4, 5, "40 - ADV", ""}, 
-					{ 4, 6, "0 - 0", SCOND_PLAYER_WIN },
-					{ 5, 3, "0 - 0", FIRST_PLAYER_WIN },
+					{ 4, 6, "0 - 0", SCOND_PLAYER_WIN_GAME },
+					{ 5, 3, "0 - 0", FIRST_PLAYER_WIN_GAME },
 					{ 5, 4, "ADV - 40", ""}, 
 					{ 5, 5, "DEUCE - DEUCE" , ""}
 				});

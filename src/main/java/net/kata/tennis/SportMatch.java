@@ -24,4 +24,10 @@ public interface SportMatch {
 	 */
 	String getWinnerFormatted();
 	
+	/**
+	 * get the winner if the game is finished
+	 * @return
+	 */
+	Player getWinner();
+	
 }

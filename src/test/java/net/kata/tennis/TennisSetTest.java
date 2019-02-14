@@ -17,21 +17,11 @@ import org.mockito.MockitoAnnotations;
 
 /**
  * unit test for TennisSet (sprint 2 : user story 1)
- * @author kei
+ * @author lenovo
  *
  */
 @RunWith(Parameterized.class)
-public class TennisSetTest {
-
-	private static final String GAME_SCORE_0_0 = "Game score : 0 - 0";
-
-	private static final String FIRST_PLAYER = "player 1";
-
-	private static final String FIRST_PLAYER_WIN = FIRST_PLAYER + " win the set";
-	
-	private static final String SECOND_PLAYER = "player 2";
-
-	private static final String SECOND_PLAYER_WIN = SECOND_PLAYER + " win the set";
+public class TennisSetTest extends TestConstantes {
 	
 	@Mock
 	TennisGame tennisGame;
@@ -43,58 +33,60 @@ public class TennisSetTest {
 	public static List<Object[]> pointsWithScores() {
 		return Arrays
 				.asList(new Object[][] { 
-					{ 0, 0, "0 - 0", ""}, 
-					{ 0, 1, "0 - 1", ""},  
-					{ 0, 2, "0 - 2", ""},  
-					{ 0, 3, "0 - 3", ""},
-					{ 0, 4, "0 - 4", ""},
-					{ 0, 5, "0 - 5", ""},
-					{ 0, 6, "0 - 0", SECOND_PLAYER_WIN }, 
-					{ 1, 0, "1 - 0", ""},  
-					{ 1, 1, "1 - 1", ""}, 
-					{ 1, 2, "1 - 2", ""},  
-					{ 1, 3, "1 - 3", ""},
-					{ 1, 4, "1 - 4", ""},
-					{ 1, 5, "1 - 5", ""},  
-					{ 1, 6, "0 - 0", SECOND_PLAYER_WIN },
-					{ 2, 0, "2 - 0", ""},  
-					{ 2, 1, "2 - 1", ""},  
-					{ 2, 2, "2 - 2", ""},  
-					{ 2, 3, "2 - 3", ""},
-					{ 2, 4, "2 - 4", ""},
-					{ 2, 5, "2 - 5", ""},
-					{ 2, 6, "0 - 0", SECOND_PLAYER_WIN }, 
-					{ 3, 0, "3 - 0", ""},  
-					{ 3, 1, "3 - 1", ""}, 
-					{ 3, 2, "3 - 2", ""},  
-					{ 3, 3, "3 - 3", ""}, 
-					{ 3, 4, "3 - 4", ""},
-					{ 3, 5, "3 - 5", ""},
-					{ 3, 6, "0 - 0", SECOND_PLAYER_WIN },
-					{ 4, 0, "4 - 0", "" },
-					{ 4, 1, "4 - 1", "" },
-					{ 4, 2, "4 - 2", "" },
-					{ 4, 3, "4 - 3", "" },
-					{ 4, 4, "4 - 4", "" },
-					{ 4, 5, "4 - 5", "" },
-					{ 4, 6, "0 - 0", SECOND_PLAYER_WIN },
-					{ 5, 0, "5 - 0", "" },
-					{ 5, 1, "5 - 1", "" },
-					{ 5, 2, "5 - 2", "" },
-					{ 5, 3, "5 - 3", "" },
-					{ 5, 4, "5 - 4", "" },
-					{ 5, 5, "5 - 5", "" },
-					{ 5, 6, "5 - 6", "" },
-					{ 5, 7, "0 - 0", SECOND_PLAYER_WIN },					
-					{ 6, 0, "0 - 0", FIRST_PLAYER_WIN },
-					{ 6, 1, "0 - 0", FIRST_PLAYER_WIN },
-					{ 6, 2, "0 - 0", FIRST_PLAYER_WIN },
-					{ 6, 3, "0 - 0", FIRST_PLAYER_WIN },
-					{ 6, 4, "0 - 0", FIRST_PLAYER_WIN },
-					{ 6, 5, "6 - 5", "" },
-					{ 6, 6, "6 - 6", "" },
-					{ 6, 7, "0 - 0", SECOND_PLAYER_WIN },
-					{ 7, 6, "0 - 0", FIRST_PLAYER_WIN }
+					{ 0, 0, "0 - 0", XXX_WIN_THE_GAME}, 
+					{ 0, 1, "0 - 1", XXX_WIN_THE_GAME},  
+					{ 0, 2, "0 - 2", XXX_WIN_THE_GAME},  
+					{ 0, 3, "0 - 3", XXX_WIN_THE_GAME},
+					{ 0, 4, "0 - 4", XXX_WIN_THE_GAME},
+					{ 0, 5, "0 - 5", XXX_WIN_THE_GAME},
+					{ 0, 6, "0 - 0", SECOND_PLAYER_WIN_SET }, 
+					{ 1, 0, "1 - 0", XXX_WIN_THE_GAME},  
+					{ 1, 1, "1 - 1", XXX_WIN_THE_GAME}, 
+					{ 1, 2, "1 - 2", XXX_WIN_THE_GAME},  
+					{ 1, 3, "1 - 3", XXX_WIN_THE_GAME},
+					{ 1, 4, "1 - 4", XXX_WIN_THE_GAME},
+					{ 1, 5, "1 - 5", XXX_WIN_THE_GAME},  
+					{ 1, 6, "0 - 0", SECOND_PLAYER_WIN_SET },
+					{ 2, 0, "2 - 0", XXX_WIN_THE_GAME},  
+					{ 2, 1, "2 - 1", XXX_WIN_THE_GAME},  
+					{ 2, 2, "2 - 2", XXX_WIN_THE_GAME},  
+					{ 2, 3, "2 - 3", XXX_WIN_THE_GAME},
+					{ 2, 4, "2 - 4", XXX_WIN_THE_GAME},
+					{ 2, 5, "2 - 5", XXX_WIN_THE_GAME},
+					{ 2, 6, "0 - 0", SECOND_PLAYER_WIN_SET }, 
+					{ 3, 0, "3 - 0", XXX_WIN_THE_GAME},  
+					{ 3, 1, "3 - 1", XXX_WIN_THE_GAME}, 
+					{ 3, 2, "3 - 2", XXX_WIN_THE_GAME},  
+					{ 3, 3, "3 - 3", XXX_WIN_THE_GAME}, 
+					{ 3, 4, "3 - 4", XXX_WIN_THE_GAME},
+					{ 3, 5, "3 - 5", XXX_WIN_THE_GAME},
+					{ 3, 6, "0 - 0", SECOND_PLAYER_WIN_SET },
+					{ 4, 0, "4 - 0", XXX_WIN_THE_GAME },
+					{ 4, 1, "4 - 1", XXX_WIN_THE_GAME },
+					{ 4, 2, "4 - 2", XXX_WIN_THE_GAME },
+					{ 4, 3, "4 - 3", XXX_WIN_THE_GAME },
+					{ 4, 4, "4 - 4", XXX_WIN_THE_GAME },
+					{ 4, 5, "4 - 5", XXX_WIN_THE_GAME },
+					{ 4, 6, "0 - 0", SECOND_PLAYER_WIN_SET },
+					{ 5, 0, "5 - 0", XXX_WIN_THE_GAME },
+					{ 5, 1, "5 - 1", XXX_WIN_THE_GAME },
+					{ 5, 2, "5 - 2", XXX_WIN_THE_GAME },
+					{ 5, 3, "5 - 3", XXX_WIN_THE_GAME },
+					{ 5, 4, "5 - 4", XXX_WIN_THE_GAME },
+					{ 5, 5, "5 - 5", XXX_WIN_THE_GAME },
+					{ 5, 6, "5 - 6", XXX_WIN_THE_GAME },
+					{ 5, 7, "0 - 0", SECOND_PLAYER_WIN_SET },					
+					{ 6, 0, "0 - 0", FIRST_PLAYER_WIN_SET },
+					{ 6, 1, "0 - 0", FIRST_PLAYER_WIN_SET },
+					{ 6, 2, "0 - 0", FIRST_PLAYER_WIN_SET },
+					{ 6, 3, "0 - 0", FIRST_PLAYER_WIN_SET },
+					{ 6, 4, "0 - 0", FIRST_PLAYER_WIN_SET },
+					{ 6, 5, "6 - 5", XXX_WIN_THE_GAME },
+					{ 6, 6, "6 - 6", XXX_WIN_THE_GAME },
+					{ 6, 7, "6 - 6, Tie break score : 0 - 1", "" },
+					{ 7, 6, "6 - 6, Tie break score : 1 - 0", "" },
+					{ 13, 11, "0 - 0, Tie break score : 0 - 0", FIRST_PLAYER + " win the match" },
+					{ 12, 14, "0 - 0, Tie break score : 0 - 0", SECOND_PLAYER + " win the match" },
 				});
 		}
 	
@@ -119,7 +111,11 @@ public class TennisSetTest {
 	public final void testAllCases() {
 		int min = Math.min(player1Score, player2Score);
 		int max = Math.max(player1Score, player2Score);
+		//we suppose that a game is finished thus the game score is 0 - 0
 		Mockito.when(tennisGame.getGameScore()).thenReturn(GAME_SCORE_0_0);
+		if("".equals(expectedWinner) || XXX_WIN_THE_GAME.equals(expectedWinner)) {
+			Mockito.when(tennisGame.getWinnerFormatted()).thenReturn(expectedWinner);
+		}
 		IntStream.range(0, min).forEach(i -> {
 			Mockito.when(tennisGame.getWinner()).thenReturn(tennisSet.getPlayer1());
 			tennisSet.winPoint(FIRST_PLAYER);
@@ -128,10 +124,12 @@ public class TennisSetTest {
 		});
 		String playerName = (max == player1Score) ? FIRST_PLAYER : SECOND_PLAYER;
 		Player player = (max == player1Score) ? tennisSet.getPlayer1() : tennisSet.getPlayer2();
+		
 		IntStream.range(min, max).forEach(i -> {
 			Mockito.when(tennisGame.getWinner()).thenReturn(player);
 			tennisSet.winPoint(playerName);
 		});
+		
 		Assert.assertEquals(GAME_SCORE_0_0 + ", Set score : " + expected, tennisSet.getGameScore());
 		Assert.assertEquals(expectedWinner, tennisSet.getWinnerFormatted());
 	}
