@@ -1,7 +1,7 @@
 package net.kata.tennis;
 
 /**
- * Tennis game according to the srpint 1 : User story 1
+ * Tennis game according to the  sprint 1 : User story 2
  * 
  * @author kei
  *
@@ -78,7 +78,9 @@ public class TennisGame implements SportMatch {
 	 * @return
 	 */
 	private boolean isGameFinished() {
-		return Math.max(player1.getScore(), player2.getScore()) == 4;
+		int max = Math.max(player1.getScore(), player2.getScore());
+		int absDiff = Math.abs(player1.getScore() - player2.getScore());
+		return max >= 4 && absDiff >= 2;
 	}
 
 	/**
@@ -91,12 +93,31 @@ public class TennisGame implements SportMatch {
 	}
 
 	/**
-	 * format the current score (15 - 30 , 40 - 40 ...)
+	 * format the current score (15 - 30 , 40 - 40, DEUCE - DEUCE)
 	 * 
 	 * @return string representing the current score
 	 */
 	private String formatScore() {
-		return translationScores[player1.getScore()] + SEPERATOR + translationScores[player2.getScore()];
+		String formattedScore = "";
+		if(player1.getScore() < 4 && player2.getScore() < 4) {
+			formattedScore = translationScores[player1.getScore()] + SEPERATOR + translationScores[player2.getScore()];
+		}else {
+			int difference = player1.getScore() - player2.getScore();
+			switch (difference) {
+			case 0:
+				formattedScore = "DEUCE - DEUCE";
+				break;
+			case 1:
+				formattedScore = "ADV - 40";
+				break;
+			case -1:
+				formattedScore = "40 - ADV";
+				break;
+			default:
+				break;
+			}
+		}
+		return formattedScore;
 	}
 
 }
